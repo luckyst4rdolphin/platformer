@@ -49,6 +49,9 @@
 [ext_resource type="Texture2D" uid="uid://2pn4fixaenou" path="res://assets/player/runl/foxy-run_13.png" id="67_04cqw"]
 [ext_resource type="Texture2D" uid="uid://0mexxswtuu05" path="res://assets/player/runl/foxy-run_14.png" id="68_vihdy"]
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_8gr2b"]
+size = Vector2(62, 157)
+
 [sub_resource type="SpriteFrames" id="SpriteFrames_k7vj2"]
 animations = [{
 "frames": [{
@@ -218,19 +221,18 @@ animations = [{
 "speed": 14.0
 }]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_8gr2b"]
-size = Vector2(62, 157)
-
 [node name="Player" type="CharacterBody2D" unique_id=1097891245]
 script = ExtResource("1_5ef02")
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1496449279]
-position = Vector2(-32, -62)
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1019370916]
+position = Vector2(0, -53.5)
+shape = SubResource("RectangleShape2D_8gr2b")
+
+[node name="VisualPivot" type="Node2D" parent="." unique_id=862522610]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="VisualPivot" unique_id=1496449279]
+position = Vector2(-23, -62)
 scale = Vector2(0.25, 0.25)
 sprite_frames = SubResource("SpriteFrames_k7vj2")
 animation = &"idle"
 autoplay = "idle"
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1019370916]
-position = Vector2(-13, -53.5)
-shape = SubResource("RectangleShape2D_8gr2b")
