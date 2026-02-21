@@ -4261,3 +4261,5 @@ position = Vector2(127, 502)
 position = Vector2(-9, -70)
 script = ExtResource("12_ljm36")
 tilemap = NodePath("../../TileMapLayer")
+
+[editable path="Player"]
