@@ -1,0 +1,26 @@
+[gd_scene format=3 uid="uid://dxv1iq3koi2lc"]
+
+[ext_resource type="Script" uid="uid://wsy3d50aotbv" path="res://timed_platform.gd" id="1_lrt53"]
+[ext_resource type="Texture2D" uid="uid://ddcsmqwu44122" path="res://assets/PNG/snow_13.png" id="2_co8f5"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_co8f5"]
+size = Vector2(300, 50)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_5f76n"]
+size = Vector2(300, 70)
+
+[node name="TimedPlatform" type="StaticBody2D" unique_id=447560513]
+script = ExtResource("1_lrt53")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=2111605033]
+shape = SubResource("RectangleShape2D_co8f5")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=2087832318]
+position = Vector2(0.5, 0.4999981)
+scale = Vector2(2.3515625, 0.5390625)
+texture = ExtResource("2_co8f5")
+
+[node name="Area2D" type="Area2D" parent="." unique_id=807687603]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=733707445]
+shape = SubResource("RectangleShape2D_5f76n")
